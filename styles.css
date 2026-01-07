@@ -349,6 +349,39 @@ body {
     border: 1px solid var(--border-color);
 }
 
+/* Pottery Gallery */
+.pottery-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.pottery-item {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--card-bg);
+}
+
+.pottery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.pottery-item:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .pottery-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 .random-facts {
     list-style: none;
 }
