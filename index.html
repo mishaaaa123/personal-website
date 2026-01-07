@@ -3,28 +3,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Home — Mishika</title>
+  <title>Mishika</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand"><a href="index.html"></a></div>
+      <div class="brand"><a href="index.html">Mishika</a></div>
       <nav class="nav">
         <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">Talk to me</a>
         <a href="portfolio.html" class="nav-link">Portfolio</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="fun.html" class="nav-link">For Fun</a>
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="fun.html" class="nav-link">Fun</a>
       </nav>
     </div>
   </header>
 
   <main class="page-section">
     <div class="container">
-      <h2>Welcome</h2>
-      <p>Hi, I'm Mishika. I build machine learning systems and run reproducible experiments. I care about research that connects technical methods to humanistic problems.</p>
-      
-      <p>Explore my <a href="portfolio.html">portfolio</a>, learn more <a href="about.html">about me</a>, or check out something <a href="fun.html">fun</a>.</p>
+      <div class="hero-section">
+        <h1 class="hero-name">Mishika</h1>
+        <p class="hero-intro">Hi, my name is Mishika.</p>
+        
+        <div class="content-block">
+          <p>I'm deeply interested in how technology mediates visibility, creativity, and desire. I've explored these themes through machine learning research, building reproducible systems, and connecting technical methods to humanistic problems.</p>
+          
+          <p>I'm currently working on projects that bridge the gap between computational research and creative expression, exploring how algorithms shape our understanding of narrative, language, and human experience.</p>
+        </div>
+
+        <div class="content-block">
+          <p>I have a lot of creative hobbies like writing, experimenting with new technologies, and building tools that make research more accessible. I also enjoy collaborating on interdisciplinary projects that bring together different perspectives.</p>
+          
+          <p>My work is marked by curiosity, playfulness, and a commitment to making technology more human-centered.</p>
+        </div>
+
+        <div class="work-highlights">
+          <h3>Select work highlights</h3>
+          <ul class="highlights-list">
+            <li>Research on machine learning and narrative structures</li>
+            <li>Reproducible experiment pipelines and toolkits</li>
+            <li>Interactive visualizations for qualitative data</li>
+            <li>Open source contributions to ML research tools</li>
+          </ul>
+        </div>
+
+        <div class="content-block" style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid #e5e5e5;">
+          <h3>Some places I have worked with</h3>
+          <div class="logos-section" id="companyLogos">
+            <!-- Logos will be loaded dynamically from the logos folder -->
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="social-link">LinkedIn</a>
+          <span class="separator">•</span>
+          <a href="#" class="social-link">GitHub</a>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -34,6 +70,24 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    (function(){
+      const logosSection = document.getElementById('companyLogos');
+      const companyLogos = [
+        'logos/AATXAJwc_Am_uVxxHNm__XX1HOJUXTQV-l3zlowSXw=s900-c-k-c0xffffffff-no-rj-mo-3917481528'
+      ];
+
+      companyLogos.forEach(logoSrc => {
+        const logoItem = document.createElement('div');
+        logoItem.className = 'logo-item';
+        const img = document.createElement('img');
+        img.src = logoSrc;
+        img.alt = 'Company logo';
+        img.className = 'company-logo';
+        logoItem.appendChild(img);
+        logosSection.appendChild(logoItem);
+      });
+    })();
+  </script>
 </body>
 </html>

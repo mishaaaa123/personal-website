@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Work — Mishika</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><a href="index.html">Mishika</a></div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">Talk to me</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="work.html" class="nav-link active">Work</a>
+        <a href="fun.html" class="nav-link">Fun</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-section">
+    <div class="container">
+      <div class="hero-section">
+        <h2>Work</h2>
+        
+        <div class="cv-section">
+          <h3>Education</h3>
+          <div class="cv-item">
+            <div class="cv-header">
+              <h4>IIT Roorkee</h4>
+              <span class="cv-date">Year - Year</span>
+            </div>
+            <p class="cv-detail">Degree, Field of Study</p>
+            <p class="cv-description">Relevant coursework, achievements, or thesis work.</p>
+          </div>
+        </div>
+
+        <div class="cv-section">
+          <h3>Experience</h3>
+          <div class="cv-item">
+            <div class="cv-header">
+              <h4>Position Title</h4>
+              <span class="cv-date">Year - Year</span>
+            </div>
+            <p class="cv-detail">Company/Organization Name, Location</p>
+            <ul class="cv-bullets">
+              <li>Key responsibility or achievement</li>
+              <li>Another significant contribution</li>
+              <li>Project or initiative you led</li>
+            </ul>
+          </div>
+          
+          <div class="cv-item">
+            <div class="cv-header">
+              <h4>Position Title</h4>
+              <span class="cv-date">Year - Year</span>
+            </div>
+            <p class="cv-detail">Company/Organization Name, Location</p>
+            <ul class="cv-bullets">
+              <li>Key responsibility or achievement</li>
+              <li>Another significant contribution</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cv-section">
+          <h3>Research & Publications</h3>
+          <div class="cv-item">
+            <p class="cv-publication">"Paper Title" - Conference/Journal Name, Year</p>
+            <p class="cv-authors">Authors: Your Name, Co-authors</p>
+          </div>
+          <div class="cv-item">
+            <p class="cv-publication">"Another Paper Title" - Conference/Journal Name, Year</p>
+            <p class="cv-authors">Authors: Your Name, Co-authors</p>
+          </div>
+        </div>
+
+        <div class="cv-section">
+          <h3>Skills</h3>
+          <div class="cv-item">
+            <p><strong>Technical:</strong> Machine Learning, Python, Data Analysis, Research Methods</p>
+            <p><strong>Tools:</strong> TensorFlow, PyTorch, Git, LaTeX</p>
+            <p><strong>Languages:</strong> English, [Other languages]</p>
+          </div>
+        </div>
+
+        <div class="cv-section">
+          <h3>Awards & Recognition</h3>
+          <ul class="cv-bullets">
+            <li>Award name, Organization, Year</li>
+            <li>Another recognition or honor</li>
+          </ul>
+        </div>
+
+        <div class="content-block" style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid #e5e5e5;">
+          <h3>Some places I have worked with</h3>
+          <div class="logos-section" id="companyLogos">
+            <!-- Logos will be loaded dynamically from the logos folder -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2026 Mishika</small>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const logosSection = document.getElementById('companyLogos');
+      const companyLogos = [
+        'logos/AATXAJwc_Am_uVxxHNm__XX1HOJUXTQV-l3zlowSXw=s900-c-k-c0xffffffff-no-rj-mo-3917481528'
+      ];
+
+      companyLogos.forEach(logoSrc => {
+        const logoItem = document.createElement('div');
+        logoItem.className = 'logo-item';
+        const img = document.createElement('img');
+        img.src = logoSrc;
+        img.alt = 'Company logo';
+        img.className = 'company-logo';
+        logoItem.appendChild(img);
+        logosSection.appendChild(logoItem);
+      });
+    })();
+  </script>
+</body>
+</html>

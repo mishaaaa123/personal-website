@@ -3,31 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>For Fun — Mishika</title>
+  <title>Fun — Mishika</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand"><a href="index.html"></a></div>
+      <div class="brand"><a href="index.html">Mishika</a></div>
       <nav class="nav">
         <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">Talk to me</a>
         <a href="portfolio.html" class="nav-link">Portfolio</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="fun.html" class="nav-link active">For Fun</a>
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="fun.html" class="nav-link active">Fun</a>
       </nav>
     </div>
   </header>
 
   <main class="page-section">
     <div class="container">
-      <h2>Just for fun</h2>
-      <p>Click the button for a random emoji and a tiny message.</p>
+      <div class="hero-section">
+        <h2>Fun</h2>
+        
+        <div class="hobbies-section">
+          <h3>Hobbies</h3>
+          <div class="hobbies-list">
+            <div class="hobby-item">
+              <h4>Working out</h4>
+              <p>Staying active helps me stay balanced. I enjoy a mix of strength training, running, and trying new activities.</p>
+            </div>
+          </div>
+        </div>
 
-      <div class="fun-area">
-        <button id="emojiBtn" class="emoji-btn">Surprise me</button>
-        <div id="emojiDisplay" style="font-size:48px;">🤖</div>
-        <div id="emojiText" style="color:#555;">Ready when you are.</div>
+        <div class="reading-section">
+          <h3>Currently reading</h3>
+          <div class="books-grid" id="readingList"></div>
+        </div>
+
+        <div class="pottery-gallery">
+          <h3>Pottery</h3>
+          <div class="gallery-grid" id="potteryGallery"></div>
+        </div>
+
       </div>
     </div>
   </main>
@@ -40,25 +57,34 @@
 
   <script>
     (function(){
-      const btn = document.getElementById('emojiBtn');
-      const display = document.getElementById('emojiDisplay');
-      const text = document.getElementById('emojiText');
-      const items = [
-        {e:'🎉',t:'Celebrate small wins.'},
-        {e:'🤖',t:'Beep boop — friendly robot.'},
-        {e:'🪄',t:'Magic happens in experiments.'},
-        {e:'🌈',t:'Look for the bright side.'},
-        {e:'🧩',t:'Here's a puzzle piece for you.'},
-        {e:'🍪',t:'Cookie break!'},
-        {e:'🚀',t:'Launch something small today.'}
+      const gallery = document.getElementById('potteryGallery');
+      const potteryImages = [];
+      
+      if (potteryImages.length > 0) {
+        potteryImages.forEach(imgSrc => {
+          const img = document.createElement('img');
+          img.src = imgSrc;
+          img.alt = 'Pottery piece';
+          img.loading = 'lazy';
+          gallery.appendChild(img);
+        });
+      }
+
+      const readingList = document.getElementById('readingList');
+      const bookImages = [
+        'books/butter-21-2482074963.jpg',
+        'books/81PX0uhxQ3L-1542153354.jpg',
+        'books/91zImnC+uLL-600845415.jpg',
+        'books/the-stranger-taschenbuch-albert-camus-englisch-4147876500.jpeg'
       ];
-      btn.addEventListener('click', function(){
-        const pick = items[Math.floor(Math.random()*items.length)];
-        display.textContent = pick.e;
-        text.textContent = pick.t;
-        document.body.style.transition = 'background-color 0.25s ease';
-        document.body.style.backgroundColor = '#F7FFF7';
-        setTimeout(()=>document.body.style.backgroundColor='white',300);
+
+      bookImages.forEach(imgSrc => {
+        const img = document.createElement('img');
+        img.src = imgSrc;
+        img.alt = 'Book cover';
+        img.className = 'book-cover';
+        img.loading = 'lazy';
+        readingList.appendChild(img);
       });
     })();
   </script>
