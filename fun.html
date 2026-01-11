@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Fun — Mishika</title>
+  <title>Hobbies — Mishika</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand"><a href="index.html">Mishika</a></div>
       <nav class="nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">Talk to me</a>
@@ -23,26 +25,34 @@
   <main class="page-section">
     <div class="container">
       <div class="hero-section">
-        <h2>Fun</h2>
+        <h2>Hobbies</h2>
         
         <div class="hobbies-section">
-          <h3>Hobbies</h3>
+          <h3 style="text-transform: uppercase; font-family: 'Fredoka One', cursive; font-weight: 400; letter-spacing: 0.05em;">Working out</h3>
           <div class="hobbies-list">
             <div class="hobby-item">
-              <h4>Working out</h4>
-              <p>Staying active helps me stay balanced. I enjoy a mix of strength training, running, and trying new activities.</p>
+              <p>I do a mix of yoga, running and strength training. I have also played quite a bit of football during college.</p>
             </div>
           </div>
         </div>
 
         <div class="reading-section">
-          <h3>Currently reading</h3>
+          <h3 style="text-transform: uppercase; font-family: 'Fredoka One', cursive; font-weight: 400; letter-spacing: 0.05em;">Currently reading</h3>
           <div class="books-grid" id="readingList"></div>
         </div>
 
         <div class="pottery-gallery">
-          <h3>Pottery</h3>
-          <div class="gallery-grid" id="potteryGallery"></div>
+          <h3 style="text-transform: uppercase; font-family: 'Fredoka One', cursive; font-weight: 400; letter-spacing: 0.05em;">Art</h3>
+          <div class="art-subsection">
+            <h4 style="text-decoration: underline;">Pottery</h4>
+            <div class="gallery-grid" id="potteryGallery"></div>
+          </div>
+          <div class="art-subsection">
+            <h4 style="text-decoration: underline;">Design and science communication</h4>
+            <p style="font-size: 0.9rem;"><a href="https://medium.com/@mishaaaaa/sci-comm-design-work-covid-edition-8f8d4ff00d57" target="_blank" rel="noopener noreferrer">Science communication design work</a></p>
+            <p style="font-size: 0.9rem;">I have also worked for <a href="https://www.youtube.com/@AbitScience/videos" target="_blank" rel="noopener noreferrer">Abit Science</a>, which is an up and coming science communication startup. I helped them with web development, design and operations.</p>
+            <div class="gallery-grid" id="designGallery"></div>
+          </div>
         </div>
 
       </div>
@@ -51,22 +61,37 @@
 
   <footer class="site-footer">
     <div class="container">
-      <small>© 2026 Mishika</small>
+      <small>© 2026 Mishika Lunia</small>
     </div>
   </footer>
 
   <script>
     (function(){
-      const gallery = document.getElementById('potteryGallery');
-      const potteryImages = [];
+      const potteryGallery = document.getElementById('potteryGallery');
+      const potteryImages = [
+        'pottery/WhatsApp Image 2026-01-12 at 12.43.28 AM (1).jpeg',
+        'pottery/WhatsApp Image 2026-01-12 at 12.43.28 AM.jpeg',
+        'pottery/WhatsApp Image 2026-01-12 at 12.43.29 AM.jpeg'
+      ];
       
-      if (potteryImages.length > 0) {
-        potteryImages.forEach(imgSrc => {
+      potteryImages.forEach(imgSrc => {
+        const img = document.createElement('img');
+        img.src = imgSrc;
+        img.alt = 'Pottery piece';
+        img.loading = 'lazy';
+        potteryGallery.appendChild(img);
+      });
+
+      const designGallery = document.getElementById('designGallery');
+      const designImages = [];
+      
+      if (designImages.length > 0) {
+        designImages.forEach(imgSrc => {
           const img = document.createElement('img');
           img.src = imgSrc;
-          img.alt = 'Pottery piece';
+          img.alt = 'Design piece';
           img.loading = 'lazy';
-          gallery.appendChild(img);
+          designGallery.appendChild(img);
         });
       }
 
