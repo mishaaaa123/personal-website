@@ -87,6 +87,70 @@ body {
   max-width: 700px;
 }
 
+/* About page */
+.about-section {
+  max-width: 700px;
+}
+
+.about-heading {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2.5rem;
+  color: #fff;
+  text-transform: lowercase;
+  letter-spacing: -0.01em;
+}
+
+.about-content {
+  margin-bottom: 3rem;
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: #fff;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
+
+.work-intro {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 2.5rem 0;
+  display: block;
+}
+
+.about-image-left {
+  float: left;
+  width: 250px;
+  height: auto;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .about-image-left {
+    float: none;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 1.5rem;
+    display: block;
+  }
+}
+
 .hero-name {
   font-size: 3rem;
   font-weight: 400;
@@ -213,8 +277,8 @@ a:hover {
 /* Hobbies section */
 .hobbies-section {
   margin-top: 4rem;
-  padding-top: 3rem;
-  border-top: 1px solid #333;
+  padding-top: 0;
+  border-top: none;
 }
 
 .hobbies-list {
@@ -392,25 +456,85 @@ a:hover {
   line-height: 1.7;
 }
 
+/* Portfolio sections */
+.portfolio-section {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #333;
+}
+
+.portfolio-section:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.portfolio-category {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+}
+
+.portfolio-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio-item {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.portfolio-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.portfolio-title {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.portfolio-description {
+  font-size: 0.9rem;
+  color: #999;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+}
+
 /* CV Section */
 .cv-section {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   padding-top: 2.5rem;
   border-top: 1px solid #333;
 }
 
 .cv-section:first-of-type {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   padding-top: 0;
   border-top: none;
 }
 
 .cv-item {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #1a1a1a;
 }
 
 .cv-item:last-child {
   margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .cv-item p {
@@ -448,7 +572,8 @@ a:hover {
 .cv-description {
   color: #ccc;
   line-height: 1.7;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
 }
 
 .cv-bullets {
@@ -472,6 +597,152 @@ a:hover {
   color: #999;
 }
 
+/* Skills section */
+.skills-container {
+  margin-top: 1.5rem;
+}
+
+.skill-category {
+  margin-bottom: 2rem;
+}
+
+.skill-category:last-child {
+  margin-bottom: 0;
+}
+
+.skill-category-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ccc;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+  background-color: #262626;
+  border-color: #444;
+  transform: translateY(-1px);
+}
+
+/* Certifications */
+.cert-list {
+  margin-top: 1.5rem;
+}
+
+.cert-item {
+  margin-bottom: 1.5rem;
+  padding-left: 0;
+}
+
+.cert-item:last-child {
+  margin-bottom: 0;
+}
+
+.cert-name {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.cert-detail {
+  color: #999;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* CV Download buttons */
+.cv-download-section {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cv-download-button {
+  display: flex;
+  width: 250px;
+  height: 120px;
+  border: 1px solid #333;
+  background-color: #000;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.cv-download-button:hover {
+  border-color: #555;
+  background-color: #0a0a0a;
+  transform: translateY(-2px);
+}
+
+.cv-button-text {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Work highlights section */
+.work-highlights-section {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid #333;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.work-highlights-section .work-places-heading {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* Work places section */
+.work-places-section {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid #333;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.work-places-section .work-places-heading {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.work-places-heading {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ccc;
+  margin-bottom: 0.75rem;
+  margin-left: 0;
+  padding-left: 0;
+}
+
 .cv-publication {
   color: #fff;
   line-height: 1.7;
@@ -490,13 +761,16 @@ a:hover {
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
+  justify-content: flex-start;
+  margin-left: -24px;
+  padding-left: 0;
 }
 
 .logo-item {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .company-logo {
@@ -505,12 +779,15 @@ a:hover {
   width: auto;
   height: auto;
   object-fit: contain;
-  opacity: 0.8;
-  transition: opacity 0.2s ease;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  filter: grayscale(20%);
 }
 
 .company-logo:hover {
   opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.05);
 }
 
 /* Social logos */
@@ -591,9 +868,37 @@ a:hover {
     font-size: 1.75rem;
   }
 
+  .about-heading {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-content {
+    margin-bottom: 2.5rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+  }
+
   .project-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+
+  .portfolio-section {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+  }
+
+  .portfolio-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .portfolio-category {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
   }
 
   .gallery-grid {
@@ -608,6 +913,38 @@ a:hover {
 
   .cv-date {
     margin-top: 0.25rem;
+  }
+
+  .skill-tags {
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .logos-section {
+    gap: 1.5rem;
+  }
+
+  .company-logo {
+    max-height: 50px;
+    max-width: 180px;
+  }
+
+  .cv-download-section {
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .cv-download-button {
+    width: 200px;
+    height: 100px;
+  }
+
+  .cv-button-text {
+    font-size: 0.9rem;
   }
 
   .books-grid {
