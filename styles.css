@@ -68,7 +68,7 @@ body {
 /* Logo */
 .logo {
   font-family: 'Technor-Variable', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 700;
   font-variation-settings: 'wght' 700;
   color: #fff;
@@ -122,8 +122,8 @@ body {
 .about-heading {
   font-family: 'Technor-Variable', sans-serif;
   font-size: 2rem;
-  font-weight: 400;
-  font-variation-settings: 'wght' 400;
+  font-weight: 500;
+  font-variation-settings: 'wght' 500;
   margin-bottom: 2.5rem;
   color: #fff;
   text-transform: lowercase;
@@ -133,8 +133,8 @@ body {
 
 .interactive-char {
   font-family: 'Technor-Variable', sans-serif;
-  font-weight: 400;
-  font-variation-settings: 'wght' 400;
+  font-weight: 500;
+  font-variation-settings: 'wght' 500;
   display: inline-block;
   transition: font-variation-settings 0.3s ease;
   cursor: default;
@@ -359,6 +359,7 @@ a:hover {
   gap: 1.5rem;
   margin-top: 1.5rem;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .book-cover {
@@ -513,8 +514,10 @@ a:hover {
 }
 
 .portfolio-category {
-  font-size: 1.1rem;
+  font-family: 'Technor-Variable', sans-serif;
+  font-size: 1.4rem;
   font-weight: 500;
+  font-variation-settings: 'wght' 500;
   margin-bottom: 1.5rem;
   color: #fff;
   text-transform: lowercase;
@@ -888,7 +891,7 @@ a:hover {
   }
 
   .logo {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .nav {
