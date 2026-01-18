@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.7;
   color: #fff;
   background-color: #000;
@@ -319,7 +319,7 @@ a:hover {
 
 /* Hobbies section */
 .hobbies-section {
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding-top: 0;
   border-top: none;
 }
