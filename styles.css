@@ -2,8 +2,8 @@
 @font-face {
   font-family: 'Technor-Variable';
   src: url('Fonts/Technor_Complete/Fonts/WEB/fonts/Technor-Variable.woff2') format('woff2'),
-       url('Fonts/Technor_Complete/Fonts/WEB/fonts/Technor-Variable.woff') format('woff'),
-       url('Fonts/Technor_Complete/Fonts/WEB/fonts/Technor-Variable.ttf') format('truetype');
+    url('Fonts/Technor_Complete/Fonts/WEB/fonts/Technor-Variable.woff') format('woff'),
+    url('Fonts/Technor_Complete/Fonts/WEB/fonts/Technor-Variable.ttf') format('truetype');
   font-weight: 200 900;
   font-display: swap;
   font-style: normal;
@@ -121,9 +121,8 @@ body {
 
 .about-heading {
   font-family: 'Technor-Variable', sans-serif;
-  font-size: 2rem;
-  font-weight: 500;
-  font-variation-settings: 'wght' 500;
+  font-size: 1.875rem;
+  font-weight: 400;
   margin-bottom: 2.5rem;
   color: #fff;
   text-transform: lowercase;
@@ -221,7 +220,7 @@ body {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.875rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
   color: #fff;
